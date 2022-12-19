@@ -1,13 +1,13 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0934) by T. Ralphs. 
+[This is a Template](https://doi.org/10.1287/ijoc.2019.0934) by Bahman Naderi, Rubén Ruiz, Vahid Roshanaei. 
 The snapshot is based on 
 [this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
 in the development repository. 
@@ -26,10 +26,10 @@ Below is the BibTex for citing this version of the code.
 
 ```
 @article{CacheTest,
-  author =        {T. Ralphs},
+  author =        {Bahman Naderi, Rubén Ruiz, Vahid Roshanaei},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest} Version v1.0},
-  year =          {2020},
+  title =         {Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook},
+  year =          {2023},
   doi =           {10.5281/zenodo.3977566},
   url =           {https://github.com/INFORMSJoC/JoCTemplate},
 }  
@@ -37,68 +37,39 @@ Below is the BibTex for citing this version of the code.
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+The goal of this software is to be able to replicate the results of the paper
 
 ## Building
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
-
-```
-make mult
-```
-
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
-
-```
-make clean
-make sum
-```
-
-Be sure to make clean before building a different version of the code.
+It is Python code, so no need to build. However, there is a process to get results. See the Replicating section.
 
 ## Results
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
+The results directory contains some python files that are used to parse the txt files obtained as a result. The 7zip "results.7z" contains all the detailed resuls of the paper in detailed logs and text files with all the information.
 
 ## Replicating
 
-To replicate the results in [Figure 1](results/mult-test), do either
+The source files contain some Python scripts. The entry point is main.py.
 
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
+main.py takes 9 input arguments. Detailed as follows:
 
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
+1:	Problem name which can be 'Flowshop','Non-Flowshop','Hybridflowshop','Distributedflowshop','Nowaitflowshop','Setupflowshop','Tardinessflowshop','TCTflowshop','Jobshop','Flexiblejobshop','Openshop','Parallelmachine'
+2: 	Model type: 'CP','MIP'
+3:  CPU stopping time: an integer with the number of seconds you want the solver to run
+4: 	First instance number: integer with the starting instance file name you want to solve
+5:  Last instance number: integer with the last instance file name you want to solve
+6: 	Solver type: 'CPLEX','Groubi','Google','Xpress'
+7:  Number of threads: integer with the number of CPU threads to use in the selected solver
+8:  Instance path: Path to the instances files
+9:  Results path: Path to the results directory
 
-## Ongoing Development
+Example:
 
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
+python main.py Flexiblejobshop MIP 3600 1 20 CPLEX 4 .\\Instances .\\Results
 
-## Support
+will solve the MIP model type of the Flexiblejobshop with CPLEX solver with 4 threads, 3600 seconds maximum CPU time for instances from 1.txt to 20.txt in Instances folder and will place the results in Results folder
 
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+To automate this process, there are some .bat files that can be invoked. For example "LauncherPython.bat".
+
+We ran all experiments randomly to ensure statistical properties of the results. We generated "configuration files" that are in the scripts folder.
+These files contain random sets of argument strings to be fed to main.py through the provided bat files.
