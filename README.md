@@ -54,13 +54,21 @@ The source files contain some Python scripts. The entry point is main.py.
 main.py takes 9 input arguments. Detailed as follows:
 
 1:	Problem name which can be 'Flowshop','Non-Flowshop','Hybridflowshop','Distributedflowshop','Nowaitflowshop','Setupflowshop','Tardinessflowshop','TCTflowshop','Jobshop','Flexiblejobshop','Openshop','Parallelmachine'
+
 2: 	Model type: 'CP','MIP'
+
 3:  CPU stopping time: an integer with the number of seconds you want the solver to run
+
 4: 	First instance number: integer with the starting instance file name you want to solve
+
 5:  Last instance number: integer with the last instance file name you want to solve
+
 6: 	Solver type: 'CPLEX','Groubi','Google','Xpress'
+
 7:  Number of threads: integer with the number of CPU threads to use in the selected solver
+
 8:  Instance path: Path to the instances files
+
 9:  Results path: Path to the results directory
 
 Example:
