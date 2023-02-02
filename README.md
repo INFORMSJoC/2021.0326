@@ -25,7 +25,7 @@ To cite this software, please cite the [paper](https://doi.org/10.1287/ijoc.2019
 Below is the BibTex for citing this version of the code.
 
 ```
-@article{CacheTest,
+@article{Naderi2023,
   author =        {Bahman Naderi, Rubén Ruiz, Vahid Roshanaei},
   publisher =     {INFORMS Journal on Computing},
   title =         {Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook},
