@@ -31,7 +31,7 @@ Below is the BibTex for citing this version of the code.
   title =         {Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook},
   year =          {2023},
   doi =           {10.5281/zenodo.7541223},
-  url =           {https://github.com/INFORMSJoC/JoCTemplate},
+  url =           {https://github.com/INFORMSJoC/2021-0326},
 }  
 ```
 
