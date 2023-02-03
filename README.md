@@ -7,18 +7,11 @@ Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0934) by Bahman Naderi, Rubén Ruiz, Vahid Roshanaei. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
-
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
+Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook by Bahman Naderi, Rubén Ruiz, Vahid Roshanaei. 
 
 ## Cite
 
-To cite this software, please cite the [paper](https://doi.org/10.1287/ijoc.2019.0934) using its DOI and the software itself, using the following DOI.
+To cite this software, please cite the paper using its DOI and the software itself, using the following DOI.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7541223.svg)](https://doi.org/10.5281/zenodo.7541223)
 
@@ -28,10 +21,10 @@ Below is the BibTex for citing this version of the code.
 @article{Naderi2023,
   author =        {Bahman Naderi, Rubén Ruiz, Vahid Roshanaei},
   publisher =     {INFORMS Journal on Computing},
-  title =         {Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook},
+  title =         {Repository for Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook.},
   year =          {2023},
   doi =           {10.5281/zenodo.7541223},
-  url =           {https://github.com/INFORMSJoC/2021-0326},
+  url =           {https://github.com/INFORMSJoC/2021.0326},
 }  
 ```
 
