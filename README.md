@@ -7,7 +7,7 @@ Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook by Bahman Naderi, Rubén Ruiz, Vahid Roshanaei. 
+"Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook" by Bahman Naderi, Rubén Ruiz, Vahid Roshanaei. 
 
 ## Cite
 
