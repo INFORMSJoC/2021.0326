@@ -11,9 +11,9 @@ that were used in the research reported on in the paper
 
 ## Cite
 
-To cite this software, please cite the paper using its DOI and the software itself, using the following DOI.
+To cite this software, please cite [the paper](https://doi.org/10.1287/ijoc.2023.1287) using its DOI and the software itself, using the following DOI:
+[https://doi.org/10.1287/ijoc.2023.1287.cd](https://doi.org/10.1287/ijoc.2023.1287.cd)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7541223.svg)](https://doi.org/10.5281/zenodo.7541223)
 
 Below is the BibTex for citing this version of the code.
 
@@ -23,7 +23,7 @@ Below is the BibTex for citing this version of the code.
   publisher =     {INFORMS Journal on Computing},
   title =         {Repository for Mixed-Integer Programming Versus Constraint Programming for Shop Scheduling Problems: New Results and Outlook.},
   year =          {2023},
-  doi =           {10.5281/zenodo.7541223},
+  doi =           {10.1287/ijoc.2023.1287.cd},
   url =           {https://github.com/INFORMSJoC/2021.0326},
 }  
 ```
